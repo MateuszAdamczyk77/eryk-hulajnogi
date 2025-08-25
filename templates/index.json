@@ -6,25 +6,25 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Kukrin - Części i Akcesoria do E-hulajnóg",
+            "heading": "Profesjonalne Części do E-hulajnóg",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Najwyższej jakości części zamienne i akcesoria do Twojej elektrycznej hulajnogi",
+            "text": "Największy wybór oryginalnych części zamiennych i akcesoriów do wszystkich popularnych marek e-hulajnóg. Xiaomi, Ninebot, Kugoo i wiele innych.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Kupuj teraz",
+            "button_label_1": "Zobacz wszystkie produkty",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Dowiedz się więcej",
-            "button_link_2": "#about",
+            "button_label_2": "Części do Xiaomi",
+            "button_link_2": "shopify://collections/xiaomi-parts",
             "button_style_secondary_2": true
           }
         }
@@ -52,14 +52,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "O Kukrin",
+            "heading": "Twój Zaufany Partner w Świecie E-mobilności",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Jesteśmy polską firmą specjalizującą się w części i akcesoriach do e-hulajnóg. Oferujemy tylko sprawdzone produkty najwyższej jakości z gwarancją satysfakcji.<\/p>"
+            "text": "<p>Od 2018 roku specjalizujemy się w dostarczaniu najwyższej jakości części zamiennych i akcesoriów do e-hulajnóg. Nasza pasja do e-mobilności oraz wieloletnie doświadczenie w branży motoryzacyjnej pozwalają nam oferować produkty, które spełniają najwyższe standardy jakości i niezawodności.<\/p><p><strong>Dlaczego warto nam zaufać?<\/strong> Każdy produkt w naszym sklepie przechodzi rygorystyczne testy jakości, a nasze doradztwo techniczne pomaga klientom w wyborze odpowiednich części do ich hulajnóg.<\/p>"
           }
         }
       },
@@ -94,12 +94,23 @@
         "padding_bottom": 60
       }
     },
+    "brand_showcase": {
+      "type": "brand-showcase",
+      "settings": {
+        "title": "Części do Wszystkich Marek",
+        "description": "Oferujemy oryginalne części zamienne do najpopularniejszych marek e-hulajnóg na rynku",
+        "heading_size": "h2",
+        "color_scheme": "background-2",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
     "product_categories": {
       "type": "product-categories",
       "settings": {
         "title": "Kategorie Produktów",
         "heading_size": "h2",
-        "color_scheme": "background-2",
+        "color_scheme": "background-1",
         "padding_top": 60,
         "padding_bottom": 60
       }
@@ -166,13 +177,24 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
     }
   },
   "order": [
     "image_banner",
     "rich_text", 
+    "brand_showcase",
     "product_categories",
     "featured_collection",
-    "multicolumn"
+    "multicolumn",
+    "newsletter"
   ]
 }

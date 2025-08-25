@@ -1,0 +1,218 @@
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .brand-showcase {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+    background: var(--gradient-background);
+  }
+  
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .brand-card {
+    background: rgb(var(--color-background));
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(var(--color-foreground), 0.08);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .brand-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(var(--color-shadow), 0.15);
+    text-decoration: none;
+  }
+  
+  .brand-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    color: rgb(var(--color-foreground));
+  }
+  
+  .brand-description {
+    font-size: 0.875rem;
+    color: rgba(var(--color-foreground), 0.7);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  
+  @media screen and (max-width: 749px) {
+    .brands-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    .brand-card {
+      padding: 1.5rem 0.75rem;
+      min-height: 100px;
+    }
+    
+    .brand-name {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="brand-showcase page-width">
+    {% if section.settings.title != blank %}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title {{ section.settings.heading_size }}">
+          {{ section.settings.title | escape }}
+        </h2>
+      </div>
+    {% endif %}
+    
+    {% if section.settings.description != blank %}
+      <div class="rich-text__text rte">
+        <p>{{ section.settings.description }}</p>
+      </div>
+    {% endif %}
+
+    <div class="brands-grid">
+      <a href="shopify://collections/xiaomi" class="brand-card">
+        <h3 class="brand-name">Xiaomi</h3>
+        <p class="brand-description">M365, Pro, Pro 2, 1S</p>
+      </a>
+      
+      <a href="shopify://collections/ninebot" class="brand-card">
+        <h3 class="brand-name">Ninebot</h3>
+        <p class="brand-description">ES1, ES2, ES4, Max</p>
+      </a>
+      
+      <a href="shopify://collections/kugoo" class="brand-card">
+        <h3 class="brand-name">Kugoo</h3>
+        <p class="brand-description">S1, S3, G1, M4</p>
+      </a>
+      
+      <a href="shopify://collections/inokim" class="brand-card">
+        <h3 class="brand-name">Inokim</h3>
+        <p class="brand-description">Light, Quick, OX</p>
+      </a>
+      
+      <a href="shopify://collections/dualtron" class="brand-card">
+        <h3 class="brand-name">Dualtron</h3>
+        <p class="brand-description">Mini, Spider, Thunder</p>
+      </a>
+      
+      <a href="shopify://collections/kaabo" class="brand-card">
+        <h3 class="brand-name">Kaabo</h3>
+        <p class="brand-description">Mantis, Wolf, Skywalker</p>
+      </a>
+      
+      <a href="shopify://collections/zero" class="brand-card">
+        <h3 class="brand-name">Zero</h3>
+        <p class="brand-description">8, 9, 10X, 11X</p>
+      </a>
+      
+      <a href="shopify://collections/other-brands" class="brand-card">
+        <h3 class="brand-name">Inne marki</h3>
+        <p class="brand-description">Zobacz wszystkie</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Showcase",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Części do Wszystkich Marek",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "Oferujemy oryginalne części zamienne do najpopularniejszych marek e-hulajnóg na rynku",
+      "label": "Description"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        }
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2", 
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range", 
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Showcase"
+    }
+  ]
+}
+{% endschema %}
