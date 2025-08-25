@@ -534,6 +534,63 @@
       "expiration_date": "Wygasa {{ expires_on }}"
     }
   },
+  "kukrin": {
+    "hero": {
+      "title": "Kukrin - Części i Akcesoria do E-hulajnóg",
+      "subtitle": "Najwyższej jakości części zamienne i akcesoria do Twojej elektrycznej hulajnogi",
+      "shop_now": "Kupuj teraz",
+      "learn_more": "Dowiedz się więcej"
+    },
+    "features": {
+      "quality": {
+        "title": "Najwyższa Jakość",
+        "description": "Oryginalne części OEM i premium akcesoria sprawdzone przez ekspertów"
+      },
+      "shipping": {
+        "title": "Szybka Dostawa",
+        "description": "Darmowa dostawa przy zamówieniach powyżej 200 zł. Realizacja w 24h"
+      },
+      "warranty": {
+        "title": "2 Lata Gwarancji",
+        "description": "Pełna gwarancja na wszystkie części i profesjonalne wsparcie techniczne"
+      },
+      "support": {
+        "title": "Wsparcie 24/7",
+        "description": "Nasz zespół ekspertów pomoże Ci w wyborze odpowiednich części"
+      }
+    },
+    "categories": {
+      "title": "Kategorie Produktów",
+      "battery": {
+        "title": "Baterie",
+        "description": "Oryginalne baterie litowo-jonowe zwiększające zasięg Twojej hulajnogi"
+      },
+      "brakes": {
+        "title": "Hamulce",
+        "description": "Profesjonalne systemy hamulcowe dla maksymalnego bezpieczeństwa"
+      },
+      "tires": {
+        "title": "Opony",
+        "description": "Wytrzymałe opony pneumatyczne i bezpowietrzne do każdego terenu"
+      },
+      "lights": {
+        "title": "Oświetlenie",
+        "description": "Światła LED, reflektory i akcesoria zwiększające widoczność"
+      },
+      "accessories": {
+        "title": "Akcesoria",
+        "description": "Stojaki, blokady, torby i inne praktyczne dodatki"
+      },
+      "electronics": {
+        "title": "Elektronika",
+        "description": "Kontrolery, wyświetlacze LCD i systemy sterowania"
+      }
+    },
+    "about": {
+      "title": "O Kukrin",
+      "description": "Jesteśmy polską firmą specjalizującą się w części i akcesoriach do e-hulajnóg. Oferujemy tylko sprawdzone produkty najwyższej jakości z gwarancją satysfakcji."
+    }
+  },
   "recipient": {
     "form": {
       "checkbox": "Chcę to wysłać jako prezent",

@@ -1,0 +1,231 @@
+{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .product-categories {
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
+  }
+  
+  .category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--gradient-base-accent-1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .category-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    fill: var(--color-base-text);
+    opacity: 0.8;
+  }
+  
+  .category-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-base-text);
+  }
+  
+  .category-description {
+    font-size: 0.9rem;
+    color: var(--color-base-text);
+    opacity: 0.9;
+    line-height: 1.4;
+  }
+  
+  @media screen and (min-width: 750px) {
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 749px) {
+    .category-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    
+    .category-card {
+      min-height: 200px;
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="product-categories page-width">
+    {% if section.settings.title != blank %}
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title {{ section.settings.heading_size }}">
+          {{ section.settings.title | escape }}
+        </h2>
+      </div>
+    {% endif %}
+
+    <div class="category-grid">
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.battery.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.battery.description' | t }}</p>
+        </div>
+      </div>
+      
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.brakes.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.brakes.description' | t }}</p>
+        </div>
+      </div>
+      
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.tires.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.tires.description' | t }}</p>
+        </div>
+      </div>
+      
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <path d="M9 21C9.5 21 10 20.5 10 20H8C8 20.5 8.4 21 9 21ZM12 2L11 5H13L12 2ZM4.5 10.5V12.5H7.5V10.5H4.5ZM16.5 10.5V12.5H19.5V10.5H16.5ZM6 18H12C12.6 18 13 17.6 13 17V11C13 8.2 10.8 6 8 6H4C3.4 6 3 6.4 3 7V17C3 17.6 3.4 18 4 18Z"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.lights.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.lights.description' | t }}</p>
+        </div>
+      </div>
+      
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <path d="M12 2L3 7L12 12L21 7L12 2ZM3 17L12 22L21 17"/>
+            <path d="M3 12L12 17L21 12"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.accessories.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.accessories.description' | t }}</p>
+        </div>
+      </div>
+      
+      <div class="category-card">
+        <div>
+          <svg class="category-icon" viewBox="0 0 24 24">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M7 15L12 10L17 15"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+          </svg>
+          <h3 class="category-title">{{ 'kukrin.categories.electronics.title' | t }}</h3>
+          <p class="category-description">{{ 'kukrin.categories.electronics.description' | t }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Categories",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Kategorie Produktów",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        }
+      ],
+      "default": "h2",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2", 
+          "label": "Accent 2"
+        },
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "inverse",
+          "label": "Inverse"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 60
+    },
+    {
+      "type": "range", 
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Categories"
+    }
+  ]
+}
+{% endschema %}
