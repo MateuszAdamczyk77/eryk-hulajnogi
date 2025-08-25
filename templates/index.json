@@ -6,24 +6,24 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "{{ 'kukrin.hero.title' | t }}",
+            "heading": "Kukrin - Części i Akcesoria do E-hulajnóg",
             "heading_size": "h0"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "{{ 'kukrin.hero.subtitle' | t }}",
+            "text": "Najwyższej jakości części zamienne i akcesoria do Twojej elektrycznej hulajnogi",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "{{ 'kukrin.hero.shop_now' | t }}",
+            "button_label_1": "Kupuj teraz",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "{{ 'kukrin.hero.learn_more' | t }}",
+            "button_label_2": "Dowiedz się więcej",
             "button_link_2": "#about",
             "button_style_secondary_2": true
           }
@@ -52,14 +52,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "{{ 'kukrin.about.title' | t }}",
+            "heading": "O Kukrin",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>{{ 'kukrin.about.description' | t }}<\/p>"
+            "text": "<p>Jesteśmy polską firmą specjalizującą się w części i akcesoriach do e-hulajnóg. Oferujemy tylko sprawdzone produkty najwyższej jakości z gwarancją satysfakcji.<\/p>"
           }
         }
       },
@@ -97,7 +97,7 @@
     "product_categories": {
       "type": "product-categories",
       "settings": {
-        "title": "{{ 'kukrin.categories.title' | t }}",
+        "title": "Kategorie Produktów",
         "heading_size": "h2",
         "color_scheme": "background-2",
         "padding_top": 60,
@@ -110,8 +110,8 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "{{ 'kukrin.features.quality.title' | t }}",
-            "text": "<p>{{ 'kukrin.features.quality.description' | t }}<\/p>",
+            "title": "Najwyższa Jakość",
+            "text": "<p>Oryginalne części OEM i premium akcesoria sprawdzone przez ekspertów<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -119,8 +119,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "{{ 'kukrin.features.shipping.title' | t }}",
-            "text": "<p>{{ 'kukrin.features.shipping.description' | t }}<\/p>",
+            "title": "Szybka Dostawa",
+            "text": "<p>Darmowa dostawa przy zamówieniach powyżej 200 zł. Realizacja w 24h<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -128,8 +128,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "{{ 'kukrin.features.warranty.title' | t }}",
-            "text": "<p>{{ 'kukrin.features.warranty.description' | t }}<\/p>",
+            "title": "2 Lata Gwarancji",
+            "text": "<p>Pełna gwarancja na wszystkie części i profesjonalne wsparcie techniczne<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -137,8 +137,8 @@
         "column4": {
           "type": "column",
           "settings": {
-            "title": "{{ 'kukrin.features.support.title' | t }}",
-            "text": "<p>{{ 'kukrin.features.support.description' | t }}<\/p>",
+            "title": "Wsparcie 24\/7",
+            "text": "<p>Nasz zespół ekspertów pomoże Ci w wyborze odpowiednich części<\/p>",
             "link_label": "",
             "link": ""
           }
